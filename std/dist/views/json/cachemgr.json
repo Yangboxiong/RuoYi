@@ -1,0 +1,25 @@
+{
+  "code": 0,
+  "msg": "ok",
+  "data": [
+    {
+      "cszj": 1,
+	  "csmc": "主框架页-默认皮肤样式名称",
+      "csjm": "sys.index.skinName",
+      "csjz": "skin-blue",
+      "xtnz": "是",
+	  "bz": "蓝色 skin-blue、绿色 skin-green",
+	  "ct": "2018-03-16 11:33:00"
+    },
+	{
+	  "cszj": 2,
+	  "csmc": "主框架页-默认皮肤样式名称",
+	  "csjm": "sys.index.skinName",
+	  "csjz": "skin-blue",
+	  "xtnz": "是",
+	  "bz": "蓝色 skin-blue、绿色 skin-green",
+	  "ct": "2018-03-16 11:33:00"
+	}
+  ],
+  "count": 4
+}

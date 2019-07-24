@@ -1,0 +1,87 @@
+{
+  "code": 0,
+  "msg": "ok",
+  "data": [
+    {
+      "zdzj": 1,
+	  "zdmc": "用户性别",
+      "zdlx": "sys_user_sex",
+      "status": "正常",
+      "bz": "用户性别列表",
+	  "ct": "2018-03-16 11:33:00"
+    },
+    {
+      "zdzj": 2,
+      "zdmc": "菜单状态",
+      "zdlx": "sys_show_hide",
+      "status": "正常",
+      "bz": "菜单状态列表",
+      "ct": "2018-03-16 11:33:00"
+    },
+	{
+	  "zdzj": 3,
+	  "zdmc": "系统开关",
+	  "zdlx": "sys_normal_disable",
+	  "status": "正常",
+	  "bz": "系统开关列表",
+	  "ct": "2018-03-16 11:33:00"
+	},
+	{
+	  "zdzj": 4,
+	  "zdmc": "任务状态",
+	  "zdlx": "sys_job_status",
+	  "status": "正常",
+	  "bz": "任务状态列表",
+	  "ct": "2018-03-16 11:33:00"
+	},
+	{
+	  "zdzj": 5,
+	  "zdmc": "任务分组",
+	  "zdlx": "sys_job_group",
+	  "status": "正常",
+	  "bz": "任务分组列表",
+	  "ct": "2018-03-16 11:33:00"
+	},
+	{
+	  "zdzj": 6,
+	  "zdmc": "系统是否",
+	  "zdlx": "sys_yes_no",
+	  "status": "正常",
+	  "bz": "系统是否列表",
+	  "ct": "2018-03-16 11:33:00"
+	},
+	{
+	  "zdzj": 7,
+	  "zdmc": "通知类型",
+	  "zdlx": "sys_notice_type",
+	  "status": "正常",
+	  "bz": "通知类型列表",
+	  "ct": "2018-03-16 11:33:00"
+	},
+	{
+	  "zdzj": 8,
+	  "zdmc": "通知状态",
+	  "zdlx": "sys_notice_status",
+	  "status": "正常",
+	  "bz": "通知状态列表",
+	  "ct": "2018-03-16 11:33:00"
+	},
+	{
+	  "zdzj": 9,
+	  "zdmc": "操作类型",
+	  "zdlx": "sys_oper_type",
+	  "status": "正常",
+	  "bz": "通知状态列表",
+	  "ct": "2018-03-16 11:33:00"
+	},
+	{
+	  "zdzj": 10,
+	  "zdmc": "系统状态",
+	  "zdlx": "sys_common_status",
+	  "status": "正常",
+	  "bz": "通知状态列表",
+	  "ct": "2018-03-16 11:33:00"
+	}
+  ],
+  "count": 4
+}
