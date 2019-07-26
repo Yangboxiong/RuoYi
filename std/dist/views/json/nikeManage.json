@@ -1,0 +1,21 @@
+{
+  "code": 0,
+  "msg": "ok",
+  "data": [
+    {
+      "nikeId": 1,
+      "nikeName": "管理员",
+      "power": "admin",
+      "draworder": 1,
+	  "createTime": "2018-03-16 11:33:00"
+    },
+	{
+	  "nikeId": 2,
+	  "nikeName": "普通角色",
+	  "power": "common",
+	  "draworder": 2,
+	  "createTime": "2018-03-16 11:33:00"
+	}
+  ],
+  "count": 2
+}

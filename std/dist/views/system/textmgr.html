@@ -30,7 +30,7 @@
 						<div class="layui-inline">
 							<label class="layui-form-label">字典状态：</label>
 							<div class="layui-input-block">
-								<select name="sex">
+								<select>
 									<option value="0">所有</option>
 									<option value="1">正常</option>
 									<option value="2">停用</option>
@@ -70,7 +70,9 @@
 						<a class="layui-btn layui-btn-primary layui-btn-xs" lay-event="del">新增</a>
 						<a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del">删除</a>
 					</script>
-
+					<script type="text/html" id="findStatus">
+						<span class="layui-badge layui-bg-green">正常</span>
+					</script>
 				</div>
 			</div>
 
@@ -95,20 +97,21 @@
 							}, {
 								field: 'zdzj',
 								title: '字典主键',
-								unresize: true,
-								sort: true
+								width: 100,
 							}, {
 								field: 'zdmc',
 								title: '字典名称',
-								edit: 'text'
+								edit: 'text',
+								sort: true
 							}, {
 								field: 'zdlx',
 								title: '字典类型',
-								edit: 'text'
+								edit: 'text',
+								sort: true
 							}, {
 								field: 'status',
 								title: '状态',
-								sort: true
+								templet: "#findStatus"
 							}, {
 								field: 'bz',
 								title: '备注',

@@ -1,0 +1,5 @@
+*{margin:0;padding:0; list-style: none;}
+img{ display: inline-block;}
+
+.flex{ display: flex;}
+.flex-center{ justify-content: center; align-items: center;}

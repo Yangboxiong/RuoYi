@@ -1,0 +1,23 @@
+{
+  "code": 0,
+  "msg": "ok",
+  "data": [
+    {
+      "userId": 1,
+	  "userName": "admin",
+      "nikeName": "若依",
+      "department": "研发部门",
+      "phone": "15888888888",
+	  "createTime": "2018-03-16 11:33:00"
+    },
+	{
+	  "userId": 2,
+	  "userName": "admin",
+	  "nikeName": "若依",
+	  "department": "测试部门",
+	  "phone": "15666666666",
+	  "createTime": "2018-03-16 11:33:00"
+	}
+  ],
+  "count": 2
+}

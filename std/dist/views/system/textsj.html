@@ -2,36 +2,47 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title>layui</title>
-		<meta name="renderer" content="webkit">
+		<title></title>
+	<meta name="renderer" content="webkit">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0">
 		<link rel="stylesheet" href="../../layuiadmin/layui/css/layui.css" media="all">
 		<link rel="stylesheet" href="../../layuiadmin/style/admin.css" media="all">
 	</head>
 	<body>
-
+	
 		<div class="layui-fluid">
 			<div class="layui-card">
 				<div class="layui-form layui-card-header layuiadmin-card-header-auto">
 					<div class="layui-form-item">
 						<div class="layui-inline">
-							<label class="layui-form-label">岗位编码：</label>
+							<label class="layui-form-label">字典名称：</label>
+							<div class="layui-input-block">
+								<select>
+									<option value="0" selected="">用户性别</option>
+									<option value="1">菜单状态</option>
+									<option value="2">系统开关</option>
+									<option value="3">任务状态</option>
+									<option value="4">任务分组</option>
+									<option value="5">系统是否</option>
+									<option value="6">通知类型</option>
+									<option value="7">通知状态</option>
+									<option value="8">操作类型</option>
+									<option value="9">系统状态</option>
+								</select>
+							</div>
+						</div>
+						<div class="layui-inline">
+							<label class="layui-form-label">字典标签：</label>
 							<div class="layui-input-block">
 								<input type="text" name="username" placeholder="" autocomplete="off" class="layui-input">
 							</div>
 						</div>
 						<div class="layui-inline">
-							<label class="layui-form-label">岗位名称：</label>
-							<div class="layui-input-block">
-								<input type="text" name="userphone" placeholder="" autocomplete="off" class="layui-input">
-							</div>
-						</div>
-						<div class="layui-inline">
-							<label class="layui-form-label">岗位状态：</label>
+							<label class="layui-form-label">字典名称：</label>
 							<div class="layui-input-block">
 								<select>
-									<option value="0">所有</option>
+									<option value="0" selected="">所有</option>
 									<option value="1">正常</option>
 									<option value="2">停用</option>
 								</select>
@@ -44,9 +55,9 @@
 					</div>
 				</div>
 				<div class="layui-card-body">
-
+	
 					<table class="layui-hide" id="test" lay-filter="test"></table>
-
+	
 					<script type="text/html" id="toolbarDemo">
 						<div class="layui-btn-container">
 							<button class="layui-btn layui-btn-normal layui-btn-sm"><i class="layui-icon layui-icon-add-1"></i>新增</button>
@@ -60,21 +71,23 @@
 						<a class="layui-btn layui-btn-primary layui-btn-xs" lay-event="del">新增</a>
 						<a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del">删除</a>
 					</script>
-
+					<script type="text/html" id="findStatus">
+						<span class="layui-badge layui-bg-green">正常</span>
+					</script>
 				</div>
 			</div>
-
-
-
+	
+	
+	
 			<script src="../../layuiadmin/layui/layui.js"></script>
-
+	
 			<script>
 				layui.use('table', function() {
 					var table = layui.table;
-
+	
 					table.render({
 						elem: '#test',
-						url: '../json/data.json',
+						url: '../json/textsj.json',
 						toolbar: '#toolbarDemo',
 						title: '用户数据表',
 						totalRow: false,
@@ -83,25 +96,31 @@
 								type: 'checkbox',
 								fixed: 'left'
 							}, {
-								field: 'bh',
-								title: '岗位编号'
+								field: 'zdbm',
+								title: '字典编码',
+								width: 100,
 							}, {
-								field: 'bm',
-								title: '岗位编码',
+								field: 'zdbq',
+								title: '字典标签',
 								edit: 'text',
 								sort: true
 							}, {
-								field: 'name',
-								title: '岗位名称',
+								field: 'zdjz',
+								title: '字典键值',
 								edit: 'text',
 								sort: true
 							}, {
-								field: 'sx',
-								title: '显示顺序',
+								field: 'zdpx',
+								title: '字典排序',
+								edit: 'text',
 								sort: true
 							}, {
 								field: 'status',
 								title: '状态',
+								templet: "#findStatus"
+							}, {
+								field: 'bz',
+								title: '备注',
 								edit: 'text'
 							}, {
 								field: 'ct',
@@ -115,7 +134,7 @@
 							}]
 						]
 					});
-
+	
 					//工具栏事件
 					table.on('toolbar(test)', function(obj) {
 						var checkStatus = table.checkStatus(obj.config.id);
@@ -135,6 +154,5 @@
 					});
 				});
 			</script>
-
 	</body>
 </html>

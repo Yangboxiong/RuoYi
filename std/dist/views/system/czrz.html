@@ -16,24 +16,41 @@
 				<div class="layui-form layui-card-header layuiadmin-card-header-auto">
 					<div class="layui-form-item">
 						<div class="layui-inline">
-							<label class="layui-form-label">参数名称：</label>
+							<label class="layui-form-label">系统模块：</label>
 							<div class="layui-input-block">
 								<input type="text" name="username" placeholder="" autocomplete="off" class="layui-input">
 							</div>
 						</div>
 						<div class="layui-inline">
-							<label class="layui-form-label">参数键名：</label>
+							<label class="layui-form-label">操作人员：</label>
 							<div class="layui-input-block">
 								<input type="text" name="userphone" placeholder="" autocomplete="off" class="layui-input">
 							</div>
 						</div>
 						<div class="layui-inline">
-							<label class="layui-form-label">系统内置：</label>
+							<label class="layui-form-label">操作类型：</label>
 							<div class="layui-input-block">
-								<select name="sex">
+								<select>
 									<option value="0">所有</option>
-									<option value="1">是</option>
-									<option value="2">否</option>
+									<option value="1">新增</option>
+									<option value="2">修改</option>
+									<option value="3">删除</option>
+									<option value="4">授权</option>
+									<option value="5">导出</option>
+									<option value="6">导入</option>
+									<option value="7">强推</option>
+									<option value="8">生成代码</option>
+									<option value="9">清空数据</option>
+								</select>
+							</div>
+						</div>
+						<div class="layui-inline">
+							<label class="layui-form-label">操作状态：</label>
+							<div class="layui-input-block">
+								<select>
+									<option value="0">所有</option>
+									<option value="1">成功</option>
+									<option value="2">失败</option>
 								</select>
 							</div>
 						</div>

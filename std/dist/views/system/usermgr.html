@@ -10,7 +10,7 @@
 		<link rel="stylesheet" href="../../layuiadmin/style/admin.css" media="all">
 	</head>
 	<body>
-
+		
 		<div class="layui-fluid">
 			<div class="layui-card">
 				<div class="layui-form layui-card-header layuiadmin-card-header-auto">
@@ -53,170 +53,103 @@
 						</div>
 					</div>
 				</div>
-
 				<div class="layui-card-body">
-					<div style="padding-bottom: 10px;">
-						<button class="layui-btn layui-btn-normal layui-btn-sm"><i class="layui-icon layui-icon-add-1"></i>新增</button>
-						<button class="layui-btn  layui-btn-sm"><i class="layui-icon layui-icon-edit"></i>修改</button>
-						<button class="layui-btn layui-btn-danger layui-btn-sm"><i class="layui-icon layui-icon-delete"></i>删除</button>
-						<button class="layui-btn layui-btn-sm"><i class="layui-icon layui-icon-download-circle"></i>导入</button>
-						<button class="layui-btn layui-btn-warm layui-btn-sm"><i class="layui-icon layui-icon-upload-circle"></i>导出</button>
-					</div>
-
-					<table class="layui-table">
-						<colgroup>
-							<col width="150">
-							<col width="200">
-							<col>
-						</colgroup>
-						<thead>
-							<tr>
-								<th class="layui-table-col-special">
-									<div class="layui-table-cell laytable-cell-2-0-0 laytable-cell-checkbox"><input type="checkbox" name="layTableCheckbox"
-										 lay-skin="primary" lay-filter="layTableAllChoose">
-									</div>
-								</th>
-								<th>用户ID</th>
-								<th>登录名称</th>
-								<th>用户名称</th>
-								<th>部门</th>
-								<th>手机</th>
-								<th>用户状态</th>
-								<th>创建时间</th>
-								<th>操作</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<td class="layui-table-col-special">
-									<div class="layui-table-cell laytable-cell-2-0-0 laytable-cell-checkbox"><input type="checkbox" name="layTableCheckbox"
-										 lay-skin="primary" lay-filter="layTableAllChoose">
-									</div>
-								</td>
-								<td>1</td>
-								<td>admin</td>
-								<td>若依</td>
-								<td>研发部门</td>
-								<td>15888888888</td>
-								<td align="center"><div class="layui-unselect layui-form-switch layui-form-onswitch" lay-skin="_switch"><em></em><i></i></div></td>
-								<td>2018-03-16 11:33:00</td>
-								<td>
-									<button class="layui-btn layui-btn-xs  layui-btn-normal"><i class="layui-icon layui-icon-edit"></i>编辑</button>
-									<button class="layui-btn layui-btn-xs  layui-btn-danger"><i class="layui-icon layui-icon-delete"></i>删除</button>
-									<button class="layui-btn layui-btn-xs  "><i class="layui-icon layui-icon-refresh"></i>重置</button>
-								</td>
-							</tr>
-							<tr>
-								<td class="layui-table-col-special">
-									<div class="layui-table-cell laytable-cell-2-0-0 laytable-cell-checkbox"><input type="checkbox" name="layTableCheckbox"
-										 lay-skin="primary" lay-filter="layTableAllChoose">
-									</div>
-								</td>
-								<td>2</td>
-								<td>ry</td>
-								<td>若依</td>
-								<td>测试部门</td>
-								<td>15666666666</td>
-								<td align="center"><div class="layui-unselect layui-form-switch layui-form-onswitch" lay-skin="_switch"><em></em><i></i></div></td>
-								<td>2018-03-16 11:33:00</td>
-								<td>
-									<button class="layui-btn layui-btn-xs layui-btn-normal"><i class="layui-icon layui-icon-edit"></i>编辑</button>
-									<button class="layui-btn layui-btn-xs layui-btn-danger"><i class="layui-icon layui-icon-delete"></i>删除</button>
-									<button class="layui-btn layui-btn-xs "><i class="layui-icon layui-icon-refresh"></i>重置</button>
-								</td>
-							</tr>
-							
-						</tbody>
-					</table>
-
-
+		
+					<table class="layui-hide" id="test" lay-filter="test"></table>
+		
+					<script type="text/html" id="toolbarDemo">
+						<div class="layui-btn-container">
+							<a lay-href="../user/addUser.html" class="layui-btn layui-btn-normal layui-btn-sm"><i class="layui-icon layui-icon-add-1"></i>新增</a>
+							<button class="layui-btn layui-btn-sm"><i class="layui-icon layui-icon-edit"></i>修改</button>
+							<button class="layui-btn layui-btn-danger layui-btn-sm"><i class="layui-icon layui-icon-delete"></i>删除</button>
+							<button class="layui-btn layui-btn-warm layui-btn-sm"><i class="layui-icon layui-icon-upload-circle"></i>导出</button>
+						</div>
+					</script>
+					<script type="text/html" id="barDemo">
+						<a class="layui-btn layui-btn-xs">编辑</a>
+						<a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del">删除</a>
+						<a class="layui-btn layui-btn-primary layui-btn-xs" lay-event="del">重置</a>
+					</script>
+					<script type="text/html" id="test-table-switchTpl">
+					  <input type="checkbox" name="sex" lay-skin="switch" lay-filter="test-table-sexDemo" checked="">
+					</script>
 				</div>
 			</div>
+		</div>
 		</div>
 
 		<script src="../../layuiadmin/layui/layui.js"></script>
 		<script>
 			layui.config({
-				base: '../../layuiadmin/' //静态资源所在路径
+				base: '../layuiadmin/' //静态资源所在路径
 			}).extend({
 				index: 'lib/index' //主入口模块
-			}).use(['index', 'useradmin', 'table'], function() {
-				var $ = layui.$,
-					form = layui.form,
-					table = layui.table;
-
-				//监听搜索
-				form.on('submit(LAY-user-front-search)', function(data) {
-					var field = data.field;
-
-					//执行重载
-					table.reload('LAY-user-manage', {
-						where: field
-					});
+			}).use('table', function() {
+				var table = layui.table;
+				
+				table.render({
+					elem: '#test',
+					url: '../json/userManage.json',
+					toolbar: '#toolbarDemo',
+					title: '用户数据表',
+					totalRow: false,
+					cols: [
+						[{
+							type: 'checkbox',
+							fixed: 'left'
+						}, {
+							field: 'userId',
+							title: '用户ID'
+						}, {
+							field: 'userName',
+							title: '登录名称',
+							edit: 'text',
+							sort: true
+						}, {
+							field: 'nikeName',
+							title: '用户名称',
+							edit: 'text'
+						}, {
+							field: 'department',
+							title: '部门',
+							edit: 'text'
+						}, {
+							field: 'phone',
+							title: '手机',
+							edit: 'text'
+						}, {
+							field: 'userStatus',
+							title: '用户状态',
+							templet: '#test-table-switchTpl'
+						}, {
+							field: 'createTime',
+							title: '创建时间',
+							sort: true
+						}, {
+							fixed: 'right',
+							title: '操作',
+							toolbar: '#barDemo',
+							width: 150
+						}]
+					]
 				});
-
-				//事件
-				var active = {
-					batchdel: function() {
-						var checkStatus = table.checkStatus('LAY-user-manage'),
-							checkData = checkStatus.data; //得到选中的数据
-
-						if (checkData.length === 0) {
-							return layer.msg('请选择数据');
-						}
-
-						layer.prompt({
-							formType: 1,
-							title: '敏感操作，请验证口令'
-						}, function(value, index) {
-							layer.close(index);
-
-							layer.confirm('确定删除吗？', function(index) {
-
-								//执行 Ajax 后重载
-								/*
-								admin.req({
-								  url: 'xxx'
-								  //,……
-								});
-								*/
-								table.reload('LAY-user-manage');
-								layer.msg('已删除');
-							});
-						});
-					},
-					add: function() {
-						layer.open({
-							type: 2,
-							title: '添加用户',
-							content: 'userform.html',
-							maxmin: true,
-							area: ['500px', '450px'],
-							btn: ['确定', '取消'],
-							yes: function(index, layero) {
-								var iframeWindow = window['layui-layer-iframe' + index],
-									submitID = 'LAY-user-front-submit',
-									submit = layero.find('iframe').contents().find('#' + submitID);
-
-								//监听提交
-								iframeWindow.layui.form.on('submit(' + submitID + ')', function(data) {
-									var field = data.field; //获取提交的字段
-
-									//提交 Ajax 成功后，静态更新表格中的数据
-									//$.ajax({});
-									table.reload('LAY-user-front-submit'); //数据刷新
-									layer.close(index); //关闭弹层
-								});
-
-								submit.trigger('click');
-							}
-						});
-					}
-				};
-
-				$('.layui-btn.layuiadmin-btn-useradmin').on('click', function() {
-					var type = $(this).data('type');
-					active[type] ? active[type].call(this) : '';
+			
+				//工具栏事件
+				table.on('toolbar(test)', function(obj) {
+					var checkStatus = table.checkStatus(obj.config.id);
+					switch (obj.event) {
+						case 'getCheckData':
+							var data = checkStatus.data;
+							layer.alert(JSON.stringify(data));
+							break;
+						case 'getCheckLength':
+							var data = checkStatus.data;
+							layer.msg('选中了：' + data.length + ' 个');
+							break;
+						case 'isAll':
+							layer.msg(checkStatus.isAll ? '全选' : '未全选')
+							break;
+					};
 				});
 			});
 		</script>
